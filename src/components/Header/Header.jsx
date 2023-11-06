@@ -50,7 +50,8 @@ const Header = () => {
     // chatMessage:"Hi, this is Comfort Furnitures how can I help",
     showPopup:true,
     accountName:"disonobudho233",
-    placeholder:"Type a message..."
+    placeholder:"Type a message...",
+    avatar:<img src={userIcon} alt="userIcon"/>
   }
   useEffect(()=>{
     stickyHeaderFunc()
