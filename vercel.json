@@ -5,28 +5,28 @@
       "dest":"/"
     },
     {
-      "src":"/",
-      "dest":"/shop"
+      "src":"/shop",
+      "dest":"/s"
     },
     {
-      "src":"/",
-      "dest":"/cart"
+      "src":"/cart",
+      "dest":"/"
     },
     {
-      "src":"/",
-      "dest":"/checkout"
+      "src":"/checkout",
+      "dest":"/"
     },
     {
-      "src":"/",
-      "dest":"/contact"
+      "src":"/contact",
+      "dest":"/"
     },
     {
-      "src":"/",
-      "dest":"/login"
+      "src":"/login",
+      "dest":"/"
     },
     {
-      "src":"/",
-      "dest":"/signup"
+      "src":"/signup",
+      "dest":"/"
     }
   ]
 }
