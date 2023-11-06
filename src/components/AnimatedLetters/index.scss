@@ -2,7 +2,7 @@
   display: inline-block;
   opacity: 0;
   animation: bounceIn;
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-delay: 1s;
   animation-fill-mode: forwards;
   min-width: 10px;
@@ -19,7 +19,7 @@
   }
 }
 
-@for $i from 1 through 75 {
+@for $i from 1 through 80 {
   .text-animate._#{$i} {
     animation-delay: #{calc($i / 10)}s;
   }
