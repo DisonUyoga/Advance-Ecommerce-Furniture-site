@@ -1,7 +1,7 @@
 import {createSlice, createAsyncThunk, createEntityAdapter} from '@reduxjs/toolkit'
 import axios from 'axios'
 
-const URL="/api/products"
+const URL="/api/products/"
 const productAdaptor=createEntityAdapter()
 
 const initialState=productAdaptor.getInitialState({
