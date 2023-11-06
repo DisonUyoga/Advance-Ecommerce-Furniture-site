@@ -9,7 +9,7 @@ import {ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import axios from 'axios'
 
-axios.defaults.baseURL="http://127.0.0.1:8000"
+axios.defaults.baseURL="https://obudhodison.pythonanywhere.com/"
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
