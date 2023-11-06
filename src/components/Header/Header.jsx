@@ -51,7 +51,7 @@ const Header = () => {
     showPopup:true,
     accountName:"disonobudho233",
     placeholder:"Type a message...",
-    avatar:<img src={userIcon} width="40px" alt="userIcon"/>
+    // avatar:<img src={userIcon} width="40px" alt="userIcon"/>
   }
   useEffect(()=>{
     stickyHeaderFunc()
