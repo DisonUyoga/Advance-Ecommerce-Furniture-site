@@ -24,8 +24,13 @@ const Home = () => {
   const products=useSelector(selectAll)
   const dispatch=useDispatch()
   const navigate=useNavigate()
- 
-  console.log('hhh',products)
+  const year= new Date().getFullYear()
+  const [trendingProducts, setTrendingProducts]= useState([])
+  const [bestSalesProducts, setBestSalesProducts]=useState([])
+  const [mobileProducts, setMobileProducts]=useState([])
+  const [wirelessProducts, setWirelessProducts]=useState([])
+  const [popularProducts, setPopularProducts]=useState([])
+
   useEffect(()=>{
     if(status==="idle"){
       dispatch(fetchProducts())
@@ -38,12 +43,9 @@ const Home = () => {
     <h3 className='text-center'>{error}</h3>
   }
 
-  const year= new Date().getFullYear()
-  const [trendingProducts, setTrendingProducts]= useState([])
-  const [bestSalesProducts, setBestSalesProducts]=useState([])
-  const [mobileProducts, setMobileProducts]=useState([])
-  const [wirelessProducts, setWirelessProducts]=useState([])
-  const [popularProducts, setPopularProducts]=useState([])
+  if(products.length===0){
+    return <Spinner/>
+  }
   useEffect(()=>{
     if(products.length>0){
     const filteredTrendingProducts=products.filter(

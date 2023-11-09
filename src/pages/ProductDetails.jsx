@@ -15,6 +15,7 @@ import { useSelector } from 'react-redux';
 import { submitReview } from '../utils/getAuth';
 import Stars from '../components/UI/Stars';
 import {getAunthentication} from '../redux/slices/loginSlice'
+import Spinner from '../components/Spinner';
 
 const ProductDetails = () => {
   const [tab, setTab]=useState('desc')
@@ -27,15 +28,22 @@ const ProductDetails = () => {
   const {id}=useParams()
   const navigation=useNavigation()
   const dispatch=useDispatch()
+  const product=products.find(item=>item?.id===parseInt(id))
+  const [reviewData, setReview]=useState(product?.reviews)
+  const item_id=parseInt(id)
 
+  useEffect(()=>{
+    window.scrollTo(0,300)
+  },[product])
+ 
   if(!authentication){
     // toast.error("You must log in")
     return <Navigate to="/" replace/>
   }
-
-  const product=products.find(item=>item?.id===parseInt(id))
-  const [reviewData, setReview]=useState(product?.reviews)
-  const item_id=parseInt(id)
+   
+  if(!product){
+    return <Spinner/>
+  }
   const {
     imgUrl, 
     productName, 
@@ -92,9 +100,7 @@ const ProductDetails = () => {
   }
   
 
-  useEffect(()=>{
-    window.scrollTo(0,300)
-  },[product])
+ 
 
  
   
