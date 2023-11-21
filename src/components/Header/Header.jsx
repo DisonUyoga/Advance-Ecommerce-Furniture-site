@@ -79,7 +79,7 @@ const Header = () => {
         <div className="logo logo__animate">
             <img className="animate__image" src={logo} alt="logo" />
             <div>
-              <h1 onClick={()=>navigateToCart("/")}>Comfort</h1>
+              <h1 onClick={()=>navigateToCart("/")}>Maina Comfort</h1>
             </div>
         </div>
         <div className="navigation" ref={menuRef} onClick={menuToggle}>

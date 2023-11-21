@@ -16,14 +16,9 @@ const Trending = ({products, year}) => {
   const max_score=Math.max(...scoreArr)
   const trending_item=products?.filter(item=>parseInt(item.total_rating)===parseInt(max_score))
   
-  const {
-    imgUrl,
-    description
-  }=trending_item[0]
-
-  const image =imgUrl ?? heroImg
+  const image =trending_item[0]?.imgUrl ?? heroImg
   
-  const desc =description ?? <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia esse molestias commodi praesentium labore possimus ratione vero aut laborum consequatur?</p>
+  const desc =trending_item[0]?.description ?? <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia esse molestias commodi praesentium labore possimus ratione vero aut laborum consequatur?</p>
   const title="Make Your Interior More Minimalistic & Modern"
   const descArray=[]
 

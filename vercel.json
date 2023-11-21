@@ -6,18 +6,14 @@
     },
     {
       "src":"/shop",
-      "dest":"/s"
+      "dest":"/"
+    },
+    {
+      "src":"/shop/:id",
+      "dest":"/shop"
     },
     {
       "src":"/cart",
-      "dest":"/"
-    },
-    {
-      "src":"/checkout",
-      "dest":"/"
-    },
-    {
-      "src":"/contact",
       "dest":"/"
     },
     {
@@ -26,6 +22,10 @@
     },
     {
       "src":"/signup",
+      "dest":"/"
+    },
+    {
+      "src":"/checkout",
       "dest":"/"
     }
   ]
